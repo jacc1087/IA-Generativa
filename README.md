@@ -16,6 +16,7 @@
 > </br>
 > Celda de configuración y API Key
 > Contiene toda la información relevante del proyecto </br>
+>
 >    * En la variable GEMINI_API_KEY se debe insertar el nombre de la api key guardada en el secreto anteriormente.
 >      
 >    * Tras varias pruebas se define un tamaño de chunk de 800, si se disminuye el tamaño, aumenta la precisión pero se agotan antes los créditos de Gemini, limitados para poder usar la aplicación en modo gratuito.
