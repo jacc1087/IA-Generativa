@@ -39,6 +39,7 @@
 > Función load_pdfs, carga todos los pdfs de la carpeta página a página y crea los chunking de 800 palabras con 100 de solapamiento, como hemos predefinido en la celda de configuración.
 > Devuelve por pantalla las páginas de cada pdf, y el total de chunks obtenidos.
 > Carga de documentos en ChromaDB con Gemini Embeddings, los embeddings son vectores obtenidos de los chunks generados anteriormente, una vez obtenidos los embeddings, se crea la base de datos vectorial en ChromaDB.
+> Para la creación de la base de conocimiento se hace en fragmentos pequeños y con pausas de tiempo entre uno y otro, para evitar que aparezca un error que me aparecía si queria indexar elementos demasiado grandes de golpe, por eso es un proceso algo más lento en comparación con los demás.
 <img width="679" height="433" alt="Captura de pantalla 2026-05-10 a las 12 44 00" src="https://github.com/user-attachments/assets/8cdbad79-b6f6-445c-b577-56cb503d8e3a" />
 <img width="714" height="493" alt="Captura de pantalla 2026-05-10 a las 12 44 10" src="https://github.com/user-attachments/assets/e6d1f0e0-21f6-462a-af9e-b917851a53b7" />
 
@@ -48,6 +49,7 @@
 
 
 #### Agente LangGraph
+
 
 #### Memoria de conversación
 
