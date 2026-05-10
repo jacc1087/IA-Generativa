@@ -2,6 +2,7 @@
 
 ## Asistente experto con Gemini, RAG y agentes
 > ⚠️ **ADVERTENCIA DE SPOILERS**
+> <br>
 > Este notebook contiene información detallada sobre el argumento y los finales de las películas de Quentin Tarantino.
 > **Continúa bajo tu propia responsabilidad.**
 
