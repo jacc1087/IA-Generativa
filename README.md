@@ -17,17 +17,17 @@
 > Celda de configuración y API Key
 > Contiene toda la información relevante del proyecto
 > </br>
->  * En la variable GEMINI_API_KEY se debe insertar el nombre de la api key guardada en el secreto anteriormente.
+>    * En la variable GEMINI_API_KEY se debe insertar el nombre de la api key guardada en el secreto anteriormente.
 
-* Tras varias pruebas se define un tamaño de chunk de 800, si se disminuye el tamaño, aumenta la precisión pero se agotan antes los créditos de Gemini, limitados para poder usar la aplicación en modo gratuito.
+>    * Tras varias pruebas se define un tamaño de chunk de 800, si se disminuye el tamaño, aumenta la precisión pero se agotan antes los créditos de Gemini, limitados para poder usar la aplicación en modo gratuito.
 
-* chunk overlap contiene los chunks que se comparten con el anterior extracto para que se mantenga el contexto en la mayor medida posible.
+>    * chunk overlap contiene los chunks que se comparten con el anterior extracto para que se mantenga el contexto en la mayor medida posible.
 
-* K se refiere al número de chunks que recupera el sistema para contestar a cada pregunta que se le haga.
+>    * K se refiere al número de chunks que recupera el sistema para contestar a cada pregunta que se le haga.
 
-* Se utiliza el modelo de embedding de 'embedding-001'
+>    * Se utiliza el modelo de embedding de 'embedding-001'
 
-* Se utiliza el modelo de LLM 'Gemini 2.5 Flash Lite' aunque también funciona con otros modelos como el 2.0
+>    * Se utiliza el modelo de LLM 'Gemini 2.5 Flash Lite' aunque también funciona con otros modelos como el 2.0
 
 
 #### Definición del tema experto
