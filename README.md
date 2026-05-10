@@ -2,12 +2,18 @@
 
 ## Asistente experto con Gemini, RAG y agentes
 > ⚠️ **ADVERTENCIA DE SPOILERS**
-> <br>
+> </br>
 > Este notebook contiene información detallada sobre el argumento y los finales de las películas de Quentin Tarantino.
 > </br>
 > **Continúa bajo tu propia responsabilidad.**
 
 #### Instrucciones de instalación y ejecución
+> Este proyecto se ha desarrollado en Google Colab, por lo que se recomienda su ejecución en el mismo entorno
+> </br>
+> Contiene dos archivos con las siguientes funciones:
+>   * carpeta pdfs: Contiene toda la información sobre películas de Tarantino descargada de Wikipedia
+>   * Proyecto.ipynb: Contiene el código del proyecto en Google Colab, es el ejecutable   
+
 
 #### Definición del tema experto
 
