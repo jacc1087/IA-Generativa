@@ -4,7 +4,7 @@
 > ⚠️ **ADVERTENCIA DE SPOILERS**
 > <br>
 > Este notebook contiene información detallada sobre el argumento y los finales de las películas de Quentin Tarantino.
-> <br>
+> </br>
 > **Continúa bajo tu propia responsabilidad.**
 
 #### Instrucciones de instalación y ejecución
