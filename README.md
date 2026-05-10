@@ -39,6 +39,8 @@
 > Función load_pdfs, carga todos los pdfs de la carpeta página a página y crea los chunking de 800 palabras con 100 de solapamiento, como hemos predefinido en la celda de configuración.
 > Devuelve por pantalla las páginas de cada pdf, y el total de chunks obtenidos.
 > Carga de documentos en ChromaDB con Gemini Embeddings, los embeddings son vectores obtenidos de los chunks generados anteriormente, una vez obtenidos los embeddings, se crea la base de datos vectorial en ChromaDB.
+<img width="679" height="433" alt="Captura de pantalla 2026-05-10 a las 12 44 00" src="https://github.com/user-attachments/assets/8cdbad79-b6f6-445c-b577-56cb503d8e3a" />
+<img width="714" height="493" alt="Captura de pantalla 2026-05-10 a las 12 44 10" src="https://github.com/user-attachments/assets/e6d1f0e0-21f6-462a-af9e-b917851a53b7" />
 
 #### Definición del system prompt
 > Una vez creada la base de datos vectorial en ChromaDB, se genera un system prompt para dar personalidad al agente, para definir como tiene que ser el agente, la foramción que debe tener, cómo deben ser sus respuestas, idioma y formato. Y lo que tiene que decir en caso de que no encuentre la respuesta en la base de conocimiento que hemos creado anteriormente.
