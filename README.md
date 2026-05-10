@@ -49,10 +49,16 @@
 
 
 #### Agente LangGraph
-
+> El agente se encarga de congufirar el buscador con mmr (Maximal Marginal Relevance), con lo que se consigue encontrar el chunk que más se parezca a lo que busca la pregunta, buscando siempre que los chunks no sean repetitivos entre sí para sacar la máximo información posible para preparar la respuesta de la pregunta solicitada por el usuario.
+> Monta el grafo que define el flujo a seguir por el agente, con retrieve busca en la base de datos vectorial los chunks relevantes y con generate, se genera la respuesta con Gemini
 
 #### Memoria de conversación
+> Esta celda es la que da memoria al chatbot, sin ella, cada pregunta del usuario sería independiente y el agente no recordaría nada de lo dicho anteriormente.
+> Para probar que la memoria funciona, se hacen una serie de preguntas (5 concretamente) y una de ellas se pregunta algo relacionado con otra pregunta hecha anteriormente, la respuesta que se obtiene, muestra que el agente tenía conocimiento de que esta pregunta o alguna relacionada se había hecho anteriormente.
+<img width="700" height="206" alt="Captura de pantalla 2026-05-10 a las 17 50 35" src="https://github.com/user-attachments/assets/0df64b53-6814-4913-bbad-5c9593f9ca5f" />
 
 #### Interación en el notebook
+
+
 
 #### Despliegue en Streamlit
