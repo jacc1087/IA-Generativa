@@ -1,6 +1,6 @@
 # IA-Generativa
 
-## Asistente experto con Gemini, RAG y agentes
+## Asistente experto con Gemini, RAG y agentes
 > ⚠️ **ADVERTENCIA DE SPOILERS**
 > Este notebook contiene información detallada sobre el argumento y los finales de las películas de Quentin Tarantino.
 > **Continúa bajo tu propia responsabilidad.**
