@@ -28,7 +28,7 @@
 >    * Se utiliza el modelo de embedding de 'embedding-001'.
 >      
 >    * Se utiliza el modelo de LLM 'Gemini 2.5 Flash Lite' aunque también funciona con otros modelos como el 2.0
-
+</br>
 
 ####  Definición del tema experto
 > El tema sobre el que trata el proyecto es la filmografía del director de cine Quentin Tarantino. Se han extraído todas las entradas de wikipedia de sus películas, para que se puedan encontrar datos de argumento, reparto, anécdotas, etc.
