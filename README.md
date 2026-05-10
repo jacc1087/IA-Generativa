@@ -61,8 +61,10 @@
 
 #### Despliegue en Streamlit
 > Aplicación desplegada en streamlit que incluye un chatbot parecido al del ejercicio anterior, que contesta lo que deseemos sobre las películas de la filmografía de Quentin Tarantino.
+> Este es el enlace que lleva a la aplicación en streamlit 
+https://drill-blocks-reasoning-cooperative.trycloudflare.com
+> Y, a continuación, unos ejemplos para probar el agente y el conocimiento específico adquirido
 <img width="1328" height="540" alt="Captura de pantalla 2026-05-10 a las 18 00 12" src="https://github.com/user-attachments/assets/55c7cbd3-6d20-450b-9777-ca77ed2e52e0" />
 <img width="1394" height="185" alt="Captura de pantalla 2026-05-10 a las 18 00 27" src="https://github.com/user-attachments/assets/4f36b2bf-e6a5-4aff-bb05-0f18e9a1f927" />
 
-https://drill-blocks-reasoning-cooperative.trycloudflare.com
 
