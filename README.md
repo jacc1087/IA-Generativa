@@ -55,12 +55,14 @@
 #### Memoria de conversación
 > Esta celda es la que da memoria al chatbot, sin ella, cada pregunta del usuario sería independiente y el agente no recordaría nada de lo dicho anteriormente.
 > Para probar que la memoria funciona, se hacen una serie de preguntas (5 concretamente) y una de ellas se pregunta algo relacionado con otra pregunta hecha anteriormente, la respuesta que se obtiene, muestra que el agente tenía conocimiento de que esta pregunta o alguna relacionada se había hecho anteriormente.
-<img width="700" height="206" alt="Captura de pantalla 2026-05-10 a las 17 50 35" src="https://github.com/user-attachments/assets/0df64b53-6814-4913-bbad-5c9593f9ca5f" />
-<img width="1210" height="385" alt="Captura de pantalla 2026-05-10 a las 17 53 04" src="https://github.com/user-attachments/assets/7b22db5f-8c2e-428e-aeee-619c6941ca42" />
-
 
 #### Interación en el notebook
-
-
+> Implementación de un chatbot en el que el usuario inserta la pregunra que quiere resolver, y el agente devuelve la información solicitada si es que la tiene, en caso de preguntarle algo extraño que no tenga en la base de datos, contesta que no tiene esa información solicitada y que por tanto no puede responder a la pregunta en cuestión.
 
 #### Despliegue en Streamlit
+> Aplicación desplegada en streamlit que incluye un chatbot parecido al del ejercicio anterior, que contesta lo que deseemos sobre las películas de la filmografía de Quentin Tarantino.
+<img width="1328" height="540" alt="Captura de pantalla 2026-05-10 a las 18 00 12" src="https://github.com/user-attachments/assets/55c7cbd3-6d20-450b-9777-ca77ed2e52e0" />
+<img width="1394" height="185" alt="Captura de pantalla 2026-05-10 a las 18 00 27" src="https://github.com/user-attachments/assets/4f36b2bf-e6a5-4aff-bb05-0f18e9a1f927" />
+
+https://drill-blocks-reasoning-cooperative.trycloudflare.com
+
