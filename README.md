@@ -34,13 +34,13 @@
 > El tema sobre el que trata el proyecto es la filmografía del director de cine Quentin Tarantino. Se han extraído todas las entradas de wikipedia de sus películas, para que se puedan encontrar datos de argumento, reparto, anécdotas, etc.
 > Al ejecutar la celda de 'Subida de documentación' se activa un botón llamado 'Elegir archivos', que nos permite subir todos los archivos que están dentro de la carpeta pdfs incluida en el proyecto. En total se trata de 10 documentos pdf, que engloban toda su filmografía.
 
-####  Creación de la base de conocimiento
+#### Creación de la base de conocimiento
 > Función de limpieza exhaustiva de los pdfs (clean_text), que al ser obtenidos de wikipedia tenían bastante ruido.
 > Función load_pdfs, carga todos los pdfs de la carpeta página a página y crea los chunking de 800 palabras con 100 de solapamiento, como hemos predefinido en la celda de configuración.
 > Devuelve por pantalla las páginas de cada pdf, y el total de chunks obtenidos.
 > Carga de documentos en ChromaDB con Gemini Embeddings, los embeddings son vectores obtenidos de los chunks generados anteriormente, una vez obtenidos los embeddings, se crea la base de datos vectorial en ChromaDB.
 
-####  Definición del system prompt
+#### Definición del system prompt
 > Una vez creada la base de datos vectorial en ChromaDB, se genera un system prompt para dar personalidad al agente, para definir como tiene que ser el agente, la foramción que debe tener, cómo deben ser sus respuestas, idioma y formato. Y lo que tiene que decir en caso de que no encuentre la respuesta en la base de conocimiento que hemos creado anteriormente.
 > <img width="725" height="370" alt="Captura de pantalla 2026-05-10 a las 12 39 37" src="https://github.com/user-attachments/assets/c2173e8f-f500-4204-9503-ce21e172cae5" />
 
