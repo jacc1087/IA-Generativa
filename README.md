@@ -40,7 +40,6 @@
 > Devuelve por pantalla las páginas de cada pdf, y el total de chunks obtenidos.
 > Carga de documentos en ChromaDB con Gemini Embeddings, los embeddings son vectores obtenidos de los chunks generados anteriormente, una vez obtenidos los embeddings, se crea la base de datos vectorial en ChromaDB.
 > Para la creación de la base de conocimiento se hace en fragmentos pequeños y con pausas de tiempo entre uno y otro, para evitar que aparezca un error que me aparecía si queria indexar elementos demasiado grandes de golpe, por eso es un proceso algo más lento en comparación con los demás.
-<img width="679" height="433" alt="Captura de pantalla 2026-05-10 a las 12 44 00" src="https://github.com/user-attachments/assets/8cdbad79-b6f6-445c-b577-56cb503d8e3a" />
 <img width="714" height="493" alt="Captura de pantalla 2026-05-10 a las 12 44 10" src="https://github.com/user-attachments/assets/e6d1f0e0-21f6-462a-af9e-b917851a53b7" />
 
 #### Definición del system prompt
@@ -65,6 +64,5 @@
 https://drill-blocks-reasoning-cooperative.trycloudflare.com
 > Y, a continuación, unos ejemplos para probar el agente y el conocimiento específico adquirido
 <img width="1328" height="540" alt="Captura de pantalla 2026-05-10 a las 18 00 12" src="https://github.com/user-attachments/assets/55c7cbd3-6d20-450b-9777-ca77ed2e52e0" />
-<img width="1394" height="185" alt="Captura de pantalla 2026-05-10 a las 18 00 27" src="https://github.com/user-attachments/assets/4f36b2bf-e6a5-4aff-bb05-0f18e9a1f927" />
 
 
