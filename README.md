@@ -56,27 +56,8 @@
 > Esta celda es la que da memoria al chatbot, sin ella, cada pregunta del usuario sería independiente y el agente no recordaría nada de lo dicho anteriormente.
 > Para probar que la memoria funciona, se hacen una serie de preguntas (5 concretamente) y una de ellas se pregunta algo relacionado con otra pregunta hecha anteriormente, la respuesta que se obtiene, muestra que el agente tenía conocimiento de que esta pregunta o alguna relacionada se había hecho anteriormente.
 <img width="700" height="206" alt="Captura de pantalla 2026-05-10 a las 17 50 35" src="https://github.com/user-attachments/assets/0df64b53-6814-4913-bbad-5c9593f9ca5f" />
-> ████████████████████████████████████████████████████████████
-  EJEMPLO 5 — PRUEBA DE MEMORIA 
-████████████████████████████████████████████████████████████
+<img width="1210" height="385" alt="Captura de pantalla 2026-05-10 a las 17 53 04" src="https://github.com/user-attachments/assets/7b22db5f-8c2e-428e-aeee-619c6941ca42" />
 
-Pregunta: De los premios que mencionaste antes, ¿cuál consideras el más importante para su trayectoria? ¿Y cómo se relaciona con el estilo cinematográfico que describiste?
-
-Respuesta:
-Basándome en los fragmentos proporcionados, el premio que considero el más importante para la trayectoria de Quentin Tarantino, de los que mencionaste anteriormente, es el **Óscar al mejor guion original** por **Pulp Fiction**.
-
-Este premio es significativo porque:
-
-*   Fue el único Óscar que obtuvo **Pulp Fiction**, a pesar de sus siete candidaturas, incluyendo mejor película y mejor director.
-*   Se le considera una de las obras que **lo consagró como cineasta**.
-
-En cuanto a cómo se relaciona con el estilo cinematográfico descrito:
-
-*   **Pulp Fiction** es descrita como una de las principales representantes del **cine posmoderno**, caracterizado por una "fuerza visceral tan intensa que rechaza el deseo de alcanzar cualquier sentido profundo". El premio al guion original valida la originalidad y la audacia de esta narrativa.
-*   El estilo visual, con el uso de **cinemascope**, primeros planos y contrastes marcados que recuerdan a Sergio Leone, contribuye a la **fuerza visceral** de la película. El guion es el motor que impulsa estas elecciones estilísticas y narrativas.
-*   Las **numerosas alusiones a la cultura popular** presentes en la película, que también se mencionan, son un elemento clave de su estilo posmoderno y están intrínsecamente ligadas al guion.
-
-Por lo tanto, el Óscar al mejor guion original por **Pulp Fiction** reconoce la maestría de Tarantino en la creación de una narrativa innovadora y visceral que define su estilo cinematográfico posmoderno.
 
 #### Interación en el notebook
 
