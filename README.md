@@ -121,8 +121,3 @@ Disponible tanto en el propio notebook (chatbot interactivo) como desplegado en 
 - **Base de datos vectorial:** ChromaDB
 - **Orquestación del agente:** LangGraph
 - **Interfaz:** Streamlit
-
-## 👤 Autor
-
-**José Ángel Contreras Caño**
-[GitHub](https://github.com/jacc1087) · [LinkedIn](https://linkedin.com/in/jose-angel-contreras-caño-7867a193)
