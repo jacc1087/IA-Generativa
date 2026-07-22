@@ -5,14 +5,15 @@ sys.modules["sqlite3"] = sys.modules.pop("pysqlite3")
 import os
 import re
 import streamlit as st
-from langchain_community.document_loaders import PyPDFLoader
+from langchain_community.document_loaders import TextLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_google_genai import GoogleGenerativeAIEmbeddings, ChatGoogleGenerativeAI
 from langchain_community.vectorstores import Chroma
 from langchain_core.messages import HumanMessage, AIMessage, SystemMessage
 
 # ── Configuración ────────────────────────────────────────────────
-PDF_DIR         = "pdfs"          # carpeta del repo con los PDFs de Tarantino
+PDF_DIR         = "pdfs"          # carpeta del repo con los documentos de Tarantino
+DOC_EXTENSION   = ".txt"          # los archivos del repo están en texto plano, no en PDF
 COLLECTION_NAME = "tarantino_expert"
 CHUNK_SIZE      = 800
 CHUNK_OVERLAP   = 100
@@ -81,13 +82,20 @@ def clean_text(text: str) -> str:
 
 @st.cache_resource(show_spinner="Construyendo la base de conocimiento (solo la primera vez)...")
 def load_agent():
-    # 1. Cargar y limpiar los PDFs del repo
+    # 1. Cargar y limpiar los documentos del repo
     docs = []
     for fname in sorted(os.listdir(PDF_DIR)):
-        if not fname.lower().endswith(".pdf"):
+        if not fname.lower().endswith(DOC_EXTENSION):
             continue
-        loader = PyPDFLoader(os.path.join(PDF_DIR, fname))
+        loader = TextLoader(os.path.join(PDF_DIR, fname), encoding="utf-8")
         docs.extend(loader.load())
+
+    if not docs:
+        st.error(
+            f"No se ha encontrado ningún archivo {DOC_EXTENSION} dentro de la "
+            f"carpeta '{PDF_DIR}/'. Revisa que los documentos estén subidos al repo."
+        )
+        st.stop()
 
     for doc in docs:
         doc.page_content = clean_text(doc.page_content)
@@ -100,6 +108,10 @@ def load_agent():
         separators=["\n\n", "\n", ". ", " ", ""],
     )
     chunks = splitter.split_documents(docs)
+
+    if not chunks:
+        st.error("Los documentos se cargaron pero no se generó ningún chunk. Revisa el contenido de los archivos.")
+        st.stop()
 
     # 3. Embeddings + indexado en ChromaDB (en memoria del contenedor)
     embeddings = GoogleGenerativeAIEmbeddings(
