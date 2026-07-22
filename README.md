@@ -1,68 +1,135 @@
-# IA-Generativa
+# 🎬 IA-Generativa — Asistente Experto con Gemini, RAG y Agentes
 
-## Asistente experto con Gemini, RAG y agentes
-> ⚠️ **ADVERTENCIA DE SPOILERS** ⚠️
-> </br>
-> Este notebook contiene información detallada sobre el argumento y los finales de las películas de Quentin Tarantino.
-> </br>
-> **Continúa bajo tu propia responsabilidad.**
+![Python](https://img.shields.io/badge/Python-3.10%2B-blue)
+![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-orange)
+![Gemini](https://img.shields.io/badge/LLM-Gemini%202.5%20Flash%20Lite-4285F4)
+![ChromaDB](https://img.shields.io/badge/VectorDB-ChromaDB-6E56CF)
+![Streamlit](https://img.shields.io/badge/UI-Streamlit-FF4B4B)
+![Status](https://img.shields.io/badge/Estado-Finalizado-brightgreen)
 
-#### Instrucciones de instalación y ejecución
-> Este proyecto se ha desarrollado en Google Colab, por lo que se recomienda su ejecución en el mismo entorno
-> </br>
-> Contiene dos archivos con las siguientes funciones:
->   * Carpeta pdfs: Contiene toda la información sobre películas de Tarantino descargada de Wikipedia
->   * Proyecto.ipynb: Contiene el código del proyecto en Google Colab, es el ejecutable
-> </br>
-> Celda de configuración y API Key
-> Contiene toda la información relevante del proyecto </br>
->
->    * En la variable GEMINI_API_KEY se debe insertar el nombre de la api key guardada en el secreto anteriormente.
->      
->    * Tras varias pruebas se define un tamaño de chunk de 800, si se disminuye el tamaño, aumenta la precisión pero se agotan antes los créditos de Gemini, limitados para poder usar la aplicación en modo gratuito.
->      
->    * chunk overlap contiene los chunks que se comparten con el anterior extracto para que se mantenga el contexto en la mayor medida posible.
->      
->    * K se refiere al número de chunks que recupera el sistema para contestar a cada pregunta que se le haga.
->      
->    * Se utiliza el modelo de embedding de 'embedding-001'.
->      
->    * Se utiliza el modelo de LLM 'Gemini 2.5 Flash Lite' aunque también funciona con otros modelos como el 2.0
-</br>
+Asistente conversacional experto construido con **RAG (Retrieval-Augmented Generation)** y un **agente LangGraph**, especializado en la filmografía de **Quentin Tarantino**. El sistema indexa documentación extraída de Wikipedia, recupera el contexto más relevante para cada pregunta y genera respuestas con memoria conversacional a través del modelo **Gemini**.
 
-####  Definición del tema experto
-> El tema sobre el que trata el proyecto es la filmografía del director de cine Quentin Tarantino. Se han extraído todas las entradas de wikipedia de sus películas, para que se puedan encontrar datos de argumento, reparto, anécdotas, etc.
-> Al ejecutar la celda de 'Subida de documentación' se activa un botón llamado 'Elegir archivos', que nos permite subir todos los archivos que están dentro de la carpeta pdfs incluida en el proyecto. En total se trata de 10 documentos pdf, que engloban toda su filmografía.
+> ⚠️ **Aviso de spoilers**
+> Este proyecto contiene información detallada sobre el argumento y los finales de las películas de Quentin Tarantino. Continúa bajo tu propia responsabilidad.
 
-#### Creación de la base de conocimiento
-> Función de limpieza exhaustiva de los pdfs (clean_text), que al ser obtenidos de wikipedia tenían bastante ruido.
-> Función load_pdfs, carga todos los pdfs de la carpeta página a página y crea los chunking de 800 palabras con 100 de solapamiento, como hemos predefinido en la celda de configuración.
-> Devuelve por pantalla las páginas de cada pdf, y el total de chunks obtenidos.
-> Carga de documentos en ChromaDB con Gemini Embeddings, los embeddings son vectores obtenidos de los chunks generados anteriormente, una vez obtenidos los embeddings, se crea la base de datos vectorial en ChromaDB.
-> Para la creación de la base de conocimiento se hace en fragmentos pequeños y con pausas de tiempo entre uno y otro, para evitar que aparezca un error que me aparecía si queria indexar elementos demasiado grandes de golpe, por eso es un proceso algo más lento en comparación con los demás.
-<img width="714" height="493" alt="Captura de pantalla 2026-05-10 a las 12 44 10" src="https://github.com/user-attachments/assets/e6d1f0e0-21f6-462a-af9e-b917851a53b7" />
+---
 
-#### Definición del system prompt
-> Una vez creada la base de datos vectorial en ChromaDB, se genera un system prompt para dar personalidad al agente, para definir como tiene que ser el agente, la foramción que debe tener, cómo deben ser sus respuestas, idioma y formato. Y lo que tiene que decir en caso de que no encuentre la respuesta en la base de conocimiento que hemos creado anteriormente.
-> <img width="725" height="370" alt="Captura de pantalla 2026-05-10 a las 12 39 37" src="https://github.com/user-attachments/assets/c2173e8f-f500-4204-9503-ce21e172cae5" />
+## 📑 Tabla de contenidos
 
+- [Descripción general](#-descripción-general)
+- [Arquitectura del sistema](#-arquitectura-del-sistema)
+- [Estructura del repositorio](#-estructura-del-repositorio)
+- [Instalación y ejecución](#-instalación-y-ejecución)
+- [Configuración](#-configuración)
+- [Cómo funciona](#-cómo-funciona)
+- [Demo](#-demo)
+- [Tecnologías](#-tecnologías)
+- [Autor](#-autor)
 
-#### Agente LangGraph
-> El agente se encarga de congufirar el buscador con mmr (Maximal Marginal Relevance), con lo que se consigue encontrar el chunk que más se parezca a lo que busca la pregunta, buscando siempre que los chunks no sean repetitivos entre sí para sacar la máximo información posible para preparar la respuesta de la pregunta solicitada por el usuario.
-> Monta el grafo que define el flujo a seguir por el agente, con retrieve busca en la base de datos vectorial los chunks relevantes y con generate, se genera la respuesta con Gemini
+---
 
-#### Memoria de conversación
-> Esta celda es la que da memoria al chatbot, sin ella, cada pregunta del usuario sería independiente y el agente no recordaría nada de lo dicho anteriormente.
-> Para probar que la memoria funciona, se hacen una serie de preguntas (5 concretamente) y una de ellas se pregunta algo relacionado con otra pregunta hecha anteriormente, la respuesta que se obtiene, muestra que el agente tenía conocimiento de que esta pregunta o alguna relacionada se había hecho anteriormente.
+## 📖 Descripción general
 
-#### Interación en el notebook
-> Implementación de un chatbot en el que el usuario inserta la pregunra que quiere resolver, y el agente devuelve la información solicitada si es que la tiene, en caso de preguntarle algo extraño que no tenga en la base de datos, contesta que no tiene esa información solicitada y que por tanto no puede responder a la pregunta en cuestión.
+El proyecto construye un asistente experto sobre un dominio muy concreto: **la filmografía de Quentin Tarantino**. A partir de las entradas de Wikipedia de sus 10 películas (en formato PDF), el sistema:
 
-#### Despliegue en Streamlit
-> Aplicación desplegada en streamlit que incluye un chatbot parecido al del ejercicio anterior, que contesta lo que deseemos sobre las películas de la filmografía de Quentin Tarantino.
-> Este es el enlace que lleva a la aplicación en streamlit 
-https://drill-blocks-reasoning-cooperative.trycloudflare.com
-> Y, a continuación, unos ejemplos para probar el agente y el conocimiento específico adquirido
-<img width="1328" height="540" alt="Captura de pantalla 2026-05-10 a las 18 00 12" src="https://github.com/user-attachments/assets/55c7cbd3-6d20-450b-9777-ca77ed2e52e0" />
+1. Limpia y fragmenta (*chunking*) la documentación.
+2. Genera embeddings y los indexa en una base de datos vectorial.
+3. Recupera los fragmentos más relevantes para cada pregunta mediante un agente.
+4. Genera una respuesta contextualizada y mantiene memoria de la conversación.
+5. Expone el asistente a través de una interfaz conversacional en Streamlit.
 
+## 🏗️ Arquitectura del sistema
 
+```
+PDFs (Wikipedia)
+      │
+      ▼
+Limpieza de texto (clean_text)
+      │
+      ▼
+Chunking (800 palabras / 100 solapamiento)
+      │
+      ▼
+Embeddings (Gemini embedding-001)
+      │
+      ▼
+Base de datos vectorial (ChromaDB)
+      │
+      ▼
+Agente LangGraph  ──►  Retriever (MMR)  ──►  Generación (Gemini 2.5 Flash Lite)
+      │
+      ▼
+Memoria de conversación
+      │
+      ▼
+Interfaz (Notebook / Streamlit)
+```
+
+## 📂 Estructura del repositorio
+
+| Archivo / carpeta   | Descripción                                                              |
+|----------------------|---------------------------------------------------------------------------|
+| `pdfs/`             | Documentación de las películas de Tarantino extraída de Wikipedia (10 PDFs) |
+| `Proyecto.ipynb`    | Notebook principal, ejecutable en Google Colab                            |
+| `README.md`         | Este documento                                                             |
+
+## 🚀 Instalación y ejecución
+
+Este proyecto se ha desarrollado y probado en **Google Colab**, por lo que se recomienda ejecutarlo en ese mismo entorno.
+
+1. Abre `Proyecto.ipynb` en Google Colab.
+2. Sube la carpeta `pdfs/` cuando el notebook lo solicite (celda **"Subida de documentación"** → botón *"Elegir archivos"*). Son 10 documentos que cubren toda la filmografía.
+3. Configura tu API Key de Gemini (ver [Configuración](#-configuración)).
+4. Ejecuta las celdas en orden. La primera ejecución tarda algo más al construir la base de datos vectorial por lotes.
+
+## ⚙️ Configuración
+
+Todos los parámetros relevantes se definen en la celda de configuración inicial:
+
+| Parámetro           | Valor                        | Descripción                                                                 |
+|---------------------|------------------------------|------------------------------------------------------------------------------|
+| `GEMINI_API_KEY`    | *(tu API key)*                | Se recomienda guardarla como secreto en Colab e insertar aquí su nombre     |
+| Tamaño de chunk     | `800`                         | A menor tamaño, mayor precisión, pero se consumen antes los créditos de Gemini |
+| Chunk overlap       | `100`                         | Palabras compartidas entre chunks consecutivos para mantener el contexto    |
+| `K`                 | *(nº de chunks)*              | Número de fragmentos que recupera el sistema para responder cada pregunta  |
+| Modelo de embedding | `embedding-001`               | Modelo de Gemini usado para generar los embeddings                          |
+| Modelo LLM          | `Gemini 2.5 Flash Lite`       | También compatible con otras versiones, como Gemini 2.0                    |
+
+## 🔍 Cómo funciona
+
+### Creación de la base de conocimiento
+Función `clean_text` para limpiar el ruido propio de los textos extraídos de Wikipedia, y `load_pdfs` para cargar cada PDF página a página y generar los chunks (800 palabras / 100 de solapamiento). El proceso indexa los embeddings en ChromaDB por lotes pequeños con pausas entre ellos, para evitar errores al indexar volúmenes grandes de una vez.
+
+### Definición del system prompt
+Se define la personalidad del agente: su formación, el tono de sus respuestas, el idioma y el formato de salida, así como el comportamiento cuando la pregunta no tiene respuesta en la base de conocimiento.
+
+### Agente LangGraph
+El agente configura un retriever con **MMR (Maximal Marginal Relevance)**, que prioriza fragmentos relevantes y no redundantes entre sí para maximizar la información disponible. El grafo define el flujo: `retrieve` (búsqueda en la base vectorial) → `generate` (generación de la respuesta con Gemini).
+
+### Memoria de conversación
+El agente mantiene el contexto entre preguntas. Se ha validado realizando una batería de 5 preguntas donde una de ellas hace referencia a una anterior, confirmando que el agente recuerda el histórico de la conversación.
+
+### Interacción
+Disponible tanto en el propio notebook (chatbot interactivo) como desplegado en **Streamlit**.
+
+## 🎥 Demo
+
+**App en Streamlit:** [drill-blocks-reasoning-cooperative.trycloudflare.com](https://drill-blocks-reasoning-cooperative.trycloudflare.com)
+
+| Base de conocimiento | System prompt | Interfaz Streamlit |
+|---|---|---|
+| ![Base de conocimiento](https://private-user-images.githubusercontent.com/231539012/590089631-e6d1f0e0-21f6-462a-af9e-b917851a53b7.png) | ![System prompt](https://private-user-images.githubusercontent.com/231539012/590089217-c2173e8f-f500-4204-9503-ce21e172cae5.png) | ![Streamlit](https://private-user-images.githubusercontent.com/231539012/590118593-55c7cbd3-6d20-450b-9777-ca77ed2e52e0.png) |
+
+## 🛠️ Tecnologías
+
+- **Lenguaje:** Python (Jupyter Notebook / Google Colab)
+- **LLM:** Gemini 2.5 Flash Lite
+- **Embeddings:** Gemini `embedding-001`
+- **Base de datos vectorial:** ChromaDB
+- **Orquestación del agente:** LangGraph
+- **Interfaz:** Streamlit
+
+## 👤 Autor
+
+**José Ángel Contreras Caño**
+[GitHub](https://github.com/jacc1087) · [LinkedIn](https://linkedin.com/in/jose-angel-contreras-caño-7867a193)
