@@ -12,11 +12,15 @@ Asistente conversacional experto construido con **RAG (Retrieval-Augmented Gener
 > ⚠️ **Aviso de spoilers**
 > Este proyecto contiene información detallada sobre el argumento y los finales de las películas de Quentin Tarantino. Continúa bajo tu propia responsabilidad.
 
-[![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/jacc1087/IA-Generativa/blob/main/Proyecto.ipynb)
+[![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/jacc1087/IA-Generativa/blob/main/Proyecto.ipynb) &nbsp; [![Abrir la demo](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://ia-generativa-2ujjvtwkqwbe6pjcxetm6s.streamlit.app/)
 
 ---
 
 ## 🎥 Demo
+
+**App en producción:** [ia-generativa-2ujjvtwkqwbe6pjcxetm6s.streamlit.app](https://ia-generativa-2ujjvtwkqwbe6pjcxetm6s.streamlit.app/)
+
+> Si la app lleva un tiempo sin recibir visitas, puede "dormir" para ahorrar recursos. En ese caso verás un botón para despertarla — tarda menos de un minuto.
 
 | Base de conocimiento | System prompt | Interfaz Streamlit |
 |---|---|---|
@@ -119,7 +123,7 @@ El agente configura un retriever con **MMR (Maximal Marginal Relevance)**, que p
 El agente mantiene el contexto entre preguntas. Se ha validado realizando una batería de 5 preguntas donde una de ellas hace referencia a una anterior, confirmando que el agente recuerda el histórico de la conversación.
 
 ### Interacción
-Disponible tanto en el propio notebook (chatbot interactivo) como desplegado en **Streamlit**.
+Disponible tanto en el propio notebook (chatbot interactivo) como desplegado en producción en **[Streamlit](https://ia-generativa-2ujjvtwkqwbe6pjcxetm6s.streamlit.app/)**.
 
 ## 🛠️ Tecnologías
 
