@@ -5,7 +5,7 @@ Asistente conversacional experto construido con **RAG (Retrieval-Augmented Gener
 > ⚠️ **Aviso de spoilers**
 > Este proyecto contiene información detallada sobre el argumento y los finales de las películas de Quentin Tarantino. Continúa bajo tu propia responsabilidad.
 
-[![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/jacc1087/IA-Generativa/blob/main/Proyecto.ipynb) &nbsp; [![Abrir la demo](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://ia-generativa-2ujjvtwkqwbe6pjcxetm6s.streamlit.app/)
+[![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/jacc1087/IA-Generativa/blob/main/Proyecto.ipynb) &nbsp;
 
 ---
 
@@ -13,13 +13,6 @@ Asistente conversacional experto construido con **RAG (Retrieval-Augmented Gener
 
 **App en producción:** [ia-generativa-2ujjvtwkqwbe6pjcxetm6s.streamlit.app](https://ia-generativa-2ujjvtwkqwbe6pjcxetm6s.streamlit.app/)
 
-> Si la app lleva un tiempo sin recibir visitas, puede "dormir" para ahorrar recursos. En ese caso verás un botón para despertarla — tarda menos de un minuto.
-
-| Base de conocimiento | System prompt | Interfaz Streamlit |
-|---|---|---|
-| ![Base de conocimiento](https://private-user-images.githubusercontent.com/231539012/590089631-e6d1f0e0-21f6-462a-af9e-b917851a53b7.png) | ![System prompt](https://private-user-images.githubusercontent.com/231539012/590089217-c2173e8f-f500-4204-9503-ce21e172cae5.png) | ![Streamlit](https://private-user-images.githubusercontent.com/231539012/590118593-55c7cbd3-6d20-450b-9777-ca77ed2e52e0.png) |
-
----
 
 ## 📑 Tabla de contenidos
 
