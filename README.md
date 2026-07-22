@@ -1,9 +1,28 @@
-# 🎬 Asistente Experto con Gemini, RAG y Agentes
+# 🎬 IA-Generativa — Asistente Experto con Gemini, RAG y Agentes
+
+![Python](https://img.shields.io/badge/Python-3.10%2B-blue)
+![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-orange)
+![Gemini](https://img.shields.io/badge/LLM-Gemini%202.5%20Flash%20Lite-4285F4)
+![ChromaDB](https://img.shields.io/badge/VectorDB-ChromaDB-6E56CF)
+![Streamlit](https://img.shields.io/badge/UI-Streamlit-FF4B4B)
+![Status](https://img.shields.io/badge/Estado-Finalizado-brightgreen)
 
 Asistente conversacional experto construido con **RAG (Retrieval-Augmented Generation)** y un **agente LangGraph**, especializado en la filmografía de **Quentin Tarantino**. El sistema indexa documentación extraída de Wikipedia, recupera el contexto más relevante para cada pregunta y genera respuestas con memoria conversacional a través del modelo **Gemini**.
 
 > ⚠️ **Aviso de spoilers**
 > Este proyecto contiene información detallada sobre el argumento y los finales de las películas de Quentin Tarantino. Continúa bajo tu propia responsabilidad.
+
+[![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/jacc1087/IA-Generativa/blob/main/Proyecto.ipynb) &nbsp; [**🎥 Ver demo en Streamlit →**](https://drill-blocks-reasoning-cooperative.trycloudflare.com)
+
+---
+
+## 🎥 Demo
+
+**App en Streamlit:** [drill-blocks-reasoning-cooperative.trycloudflare.com](https://drill-blocks-reasoning-cooperative.trycloudflare.com)
+
+| Base de conocimiento | System prompt | Interfaz Streamlit |
+|---|---|---|
+| ![Base de conocimiento](https://private-user-images.githubusercontent.com/231539012/590089631-e6d1f0e0-21f6-462a-af9e-b917851a53b7.png) | ![System prompt](https://private-user-images.githubusercontent.com/231539012/590089217-c2173e8f-f500-4204-9503-ce21e172cae5.png) | ![Streamlit](https://private-user-images.githubusercontent.com/231539012/590118593-55c7cbd3-6d20-450b-9777-ca77ed2e52e0.png) |
 
 ---
 
@@ -15,7 +34,6 @@ Asistente conversacional experto construido con **RAG (Retrieval-Augmented Gener
 - [Instalación y ejecución](#-instalación-y-ejecución)
 - [Configuración](#-configuración)
 - [Cómo funciona](#-cómo-funciona)
-- [Demo](#-demo)
 - [Tecnologías](#-tecnologías)
 - [Autor](#-autor)
 
@@ -105,14 +123,6 @@ El agente mantiene el contexto entre preguntas. Se ha validado realizando una ba
 ### Interacción
 Disponible tanto en el propio notebook (chatbot interactivo) como desplegado en **Streamlit**.
 
-## 🎥 Demo
-
-**App en Streamlit:** [drill-blocks-reasoning-cooperative.trycloudflare.com](https://drill-blocks-reasoning-cooperative.trycloudflare.com)
-
-| Base de conocimiento | System prompt | Interfaz Streamlit |
-|---|---|---|
-| ![Base de conocimiento](https://private-user-images.githubusercontent.com/231539012/590089631-e6d1f0e0-21f6-462a-af9e-b917851a53b7.png) | ![System prompt](https://private-user-images.githubusercontent.com/231539012/590089217-c2173e8f-f500-4204-9503-ce21e172cae5.png) | ![Streamlit](https://private-user-images.githubusercontent.com/231539012/590118593-55c7cbd3-6d20-450b-9777-ca77ed2e52e0.png) |
-
 ## 🛠️ Tecnologías
 
 - **Lenguaje:** Python (Jupyter Notebook / Google Colab)
@@ -121,3 +131,8 @@ Disponible tanto en el propio notebook (chatbot interactivo) como desplegado en 
 - **Base de datos vectorial:** ChromaDB
 - **Orquestación del agente:** LangGraph
 - **Interfaz:** Streamlit
+
+## 👤 Autor
+
+**José Ángel Contreras Caño**
+[GitHub](https://github.com/jacc1087) · [LinkedIn](https://linkedin.com/in/jose-angel-contreras-caño-7867a193)
