@@ -1,12 +1,5 @@
 # 🎬 IA-Generativa — Asistente Experto con Gemini, RAG y Agentes
 
-![Python](https://img.shields.io/badge/Python-3.10%2B-blue)
-![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-orange)
-![Gemini](https://img.shields.io/badge/LLM-Gemini%202.5%20Flash%20Lite-4285F4)
-![ChromaDB](https://img.shields.io/badge/VectorDB-ChromaDB-6E56CF)
-![Streamlit](https://img.shields.io/badge/UI-Streamlit-FF4B4B)
-![Status](https://img.shields.io/badge/Estado-Finalizado-brightgreen)
-
 Asistente conversacional experto construido con **RAG (Retrieval-Augmented Generation)** y un **agente LangGraph**, especializado en la filmografía de **Quentin Tarantino**. El sistema indexa documentación extraída de Wikipedia, recupera el contexto más relevante para cada pregunta y genera respuestas con memoria conversacional a través del modelo **Gemini**.
 
 > ⚠️ **Aviso de spoilers**
