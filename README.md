@@ -12,13 +12,11 @@ Asistente conversacional experto construido con **RAG (Retrieval-Augmented Gener
 > ⚠️ **Aviso de spoilers**
 > Este proyecto contiene información detallada sobre el argumento y los finales de las películas de Quentin Tarantino. Continúa bajo tu propia responsabilidad.
 
-[![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/jacc1087/IA-Generativa/blob/main/Proyecto.ipynb) &nbsp; [**🎥 Ver demo en Streamlit →**](https://drill-blocks-reasoning-cooperative.trycloudflare.com)
+[![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/jacc1087/IA-Generativa/blob/main/Proyecto.ipynb)
 
 ---
 
 ## 🎥 Demo
-
-**App en Streamlit:** [drill-blocks-reasoning-cooperative.trycloudflare.com](https://drill-blocks-reasoning-cooperative.trycloudflare.com)
 
 | Base de conocimiento | System prompt | Interfaz Streamlit |
 |---|---|---|
